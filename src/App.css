@@ -9,26 +9,26 @@
 
 body {
   height: 100vh;
-  background: rgb(97, 78, 112);
+  background: rgb(45, 78, 110);
   background: -moz-linear-gradient(
     180deg,
-    rgba(97, 78, 112, 1) 0%,
-    rgba(97, 78, 112, 1) 35%,
-    rgba(55, 57, 103, 1) 100%
+    rgba(45, 78, 110, 1) 0%,
+    rgba(23, 57, 89, 1) 35%,
+    rgba(12, 41, 70, 1) 100%
   );
   background: -webkit-linear-gradient(
     180deg,
-    rgba(97, 78, 112, 1) 0%,
-    rgba(97, 78, 112, 1) 35%,
-    rgba(55, 57, 103, 1) 100%
+    rgba(45, 78, 110, 1) 0%,
+    rgba(23, 57, 89, 1) 35%,
+    rgba(12, 41, 70, 1) 100%
   );
   background: linear-gradient(
     180deg,
-    rgba(97, 78, 112, 1) 0%,
-    rgba(97, 78, 112, 1) 35%,
-    rgba(55, 57, 103, 1) 100%
+    rgba(45, 78, 110, 1) 0%,
+    rgba(23, 57, 89, 1) 35%,
+    rgba(12, 41, 70, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#614e70",endColorstr="#373967",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d4e6e",endColorstr="#0c2946",GradientType=1);
   background-attachment: fixed;
 }
 .App {
@@ -61,7 +61,7 @@ h1 {
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #055680;
+  border: 1px solid #0e2946;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .todo-btn {
-  background: #055680;
+  background: #0e2946;
   color: #fff;
   border: none;
   padding: 0.55rem;
@@ -89,7 +89,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #055680;
+  background: #0e2946;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
