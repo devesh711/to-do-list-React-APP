@@ -93,14 +93,14 @@ function App() {
             <div>
               {todo.id === todoEditing ? (
                 <button
-                  className="todo-btn"
+                  className="Edit-btn"
                   onClick={() => submitEdits(todo.id)}
                 >
                   Submit Edits
                 </button>
               ) : (
                 <button
-                  className="todo-btn"
+                  className="Edit-btn"
                   onClick={() => setTodoEditing(todo.id)}
                 >
                   Edit

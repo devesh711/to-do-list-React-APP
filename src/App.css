@@ -54,6 +54,13 @@ h1 {
   background: #ffffff27;
 }
 
+@media screen and (max-width: 480px) {
+  .TodoWrapper {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
 .TodoForm {
   width: 100%;
 }
@@ -78,6 +85,15 @@ h1 {
 }
 
 .todo-btn {
+  background: #0e2946;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.Edit-btn {
   background: #0e2946;
   color: #fff;
   border: none;
