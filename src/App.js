@@ -57,60 +57,65 @@ function App() {
     setTodoEditing(null);
   }
   return (
-    <div id="todo-list" className="App">
-      <h1>To-do List</h1>
-      <form className="TodoForm" onSubmit={handleSubmit}>
-        <input
-          className="todo-input"
-          type="text"
-          onChange={(e) => setTodo(e.target.value)}
-          value={todo}
-        />
-        <button className="todo-btn" type="submit">
-          Add Todo
-        </button>
-      </form>
-      {todos.map((todo) => (
-        <div key={todo.id} className="Todo">
+    <div className="App">
+      <div id="todo-list" className="TodoWrapper">
+        <h1>To-do List</h1>
+        <form className="TodoForm" onSubmit={handleSubmit}>
           <input
-            type="checkbox"
-            id="completed"
-            checked={todo.completed}
-            onChange={() => toggleComplete(todo.id)}
+            className="todo-input"
+            type="text"
+            onChange={(e) => setTodo(e.target.value)}
+            value={todo}
           />
-          <div>
-            {todo.id === todoEditing ? (
-              <input
-                type="text"
-                onChange={(e) => setEditingText(e.target.value)}
-              />
-            ) : (
-              <div>{todo.text}</div>
-            )}
-          </div>
-
-          <div>
-            {todo.id === todoEditing ? (
-              <button className="todo-btn" onClick={() => submitEdits(todo.id)}>
-                Submit Edits
-              </button>
-            ) : (
-              <button
-                className="todo-btn"
-                onClick={() => setTodoEditing(todo.id)}
-              >
-                Edit
-              </button>
-            )}
-
-            <FontAwesomeIcon
-              className="fa-trash"
-              icon={faTrash}
-              onClick={() => deleteTodo(todo.id)}
+          <button className="todo-btn" type="submit">
+            Add Todo
+          </button>
+        </form>
+        {todos.map((todo) => (
+          <div key={todo.id} className="Todo">
+            <input
+              type="checkbox"
+              id="completed"
+              checked={todo.completed}
+              onChange={() => toggleComplete(todo.id)}
             />
+            <div>
+              {todo.id === todoEditing ? (
+                <input
+                  type="text"
+                  onChange={(e) => setEditingText(e.target.value)}
+                />
+              ) : (
+                <div>{todo.text}</div>
+              )}
+            </div>
+
+            <div>
+              {todo.id === todoEditing ? (
+                <button
+                  className="todo-btn"
+                  onClick={() => submitEdits(todo.id)}
+                >
+                  Submit Edits
+                </button>
+              ) : (
+                <button
+                  className="todo-btn"
+                  onClick={() => setTodoEditing(todo.id)}
+                >
+                  Edit
+                </button>
+              )}
+
+              <FontAwesomeIcon
+                className="fa-trash"
+                icon={faTrash}
+                onClick={() => deleteTodo(todo.id)}
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

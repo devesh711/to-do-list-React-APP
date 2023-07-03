@@ -8,13 +8,33 @@
 }
 
 body {
-  background: #06294a;
+  height: 100vh;
+  background: rgb(97, 78, 112);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(97, 78, 112, 1) 0%,
+    rgba(97, 78, 112, 1) 35%,
+    rgba(55, 57, 103, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(97, 78, 112, 1) 0%,
+    rgba(97, 78, 112, 1) 35%,
+    rgba(55, 57, 103, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(97, 78, 112, 1) 0%,
+    rgba(97, 78, 112, 1) 35%,
+    rgba(55, 57, 103, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#614e70",endColorstr="#373967",GradientType=1);
+  background-attachment: fixed;
+}
+.App {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.App {
   text-align: center;
 }
 
@@ -25,10 +45,13 @@ h1 {
 }
 
 .TodoWrapper {
-  background: #1a1a40;
+  background: #ffffff22;
   margin-top: 5rem;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 6px;
+}
+.TodoWrapper:hover {
+  background: #ffffff27;
 }
 
 .TodoForm {
@@ -44,6 +67,10 @@ h1 {
   margin-bottom: 2rem;
   width: 300px;
   color: #fff;
+}
+.todo-input:hover,
+.todo-input:active {
+  border: 1px solid #034363;
 }
 
 .todo-input::placeholder {
