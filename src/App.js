@@ -72,7 +72,7 @@ function App() {
           </button>
         </form>
         {todos.map((todo) => (
-          <div key={todo.id} className="Todo">
+          <div key={todo.id} className={todo.completed ? "completed" : "Todo"}>
             <input
               type="checkbox"
               id="completed"
